@@ -42,7 +42,7 @@ SynPASS dataset contains **9080** panoramic images (1024x2048) and **22** catego
 
 The scenes include cloudy, foggy, rainy, sunny, and day-/night-time conditions. 
 
-***The SynPASS dataset is now availabel at [GoogleDrive](https://drive.google.com/file/d/1u-5J13CD6MXpWB53apB-L6kZ3hK1JR77/view?usp=sharing).***
+***The SynPASS dataset is now available at [Hugging Face](https://huggingface.co/datasets/InSAI-Lab/SynPASS).***
 
 
 SynPASS statistic information:
@@ -60,7 +60,7 @@ SynPASS statistic information:
 Prepare datasets: 
 - [Cityscapes](https://www.cityscapes-dataset.com/)
 - [DensePASS](https://github.com/chma1024/DensePASS)
-- [SynPASS](https://drive.google.com/file/d/1u-5J13CD6MXpWB53apB-L6kZ3hK1JR77/view?usp=sharing)
+- [SynPASS](https://huggingface.co/datasets/InSAI-Lab/SynPASS)
 - [Stanford2D3D](https://arxiv.org/abs/1702.01105)
 - [Structured3D](https://structured3d-dataset.org/)
 ```
@@ -124,7 +124,7 @@ python -m torch.distributed.launch --nproc_per_node=4 tools/train_s2d3d.py --con
 ```
 
 ## Test
-Download the models from [GoogleDrive](https://drive.google.com/drive/folders/1snUdrg_Y9whnCQi9QNFLI6hRoYhGm3Qv?usp=sharing) and save in `./workdirs` folder as:
+Download the models from [Hugging Face](https://huggingface.co/InSAI-Lab/Trans4PASS) and save in `./workdirs` folder as:
 
 <details>
 <summary> workdirs folder:</summary>
@@ -195,10 +195,10 @@ python tools/eval.py --config-file configs/cityscapes/trans4pass_plus_tiny_512x5
 
 | **Network**     | **CS** |   **DP** | Download |
 | :-------------- | :-------: | :---------: | :-------------: |
-| Trans4PASS (T)  |   72.49 | 45.89 | [model](https://drive.google.com/drive/folders/1kptkc1ltIRSu_9mo0-Cjah_-yLCI9uFK?usp=sharing) |
-| Trans4PASS (S)  | 72.84  | 51.38 | [model](https://drive.google.com/drive/folders/1a7Coa1Vct3NzURkKFGZ3BGO-f54af84L?usp=sharing) |
-| Trans4PASS+ (T) | 72.67  | 50.23 | [model](https://drive.google.com/drive/folders/1MUrNXVdKNGghVQ567ZyLnDZUXn6uxkXr?usp=sharing) |
-| Trans4PASS+ (S) | 75.24 | 51.41 | [model](https://drive.google.com/drive/folders/12lI9EPo8FD2kjhw-M6nLaaEoxHmByvIS?usp=sharing) |
+| Trans4PASS (T)  |   72.49 | 45.89 | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/cityscapes/trans4pass_tiny_512x512) |
+| Trans4PASS (S)  | 72.84  | 51.38 | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/cityscapes/trans4pass_small_512x512) |
+| Trans4PASS+ (T) | 72.67  | 50.23 | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/cityscapes/trans4pass_plus_tiny_512x512) |
+| Trans4PASS+ (S) | 75.24 | 51.41 | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/cityscapes/trans4pass_plus_small_512x512) |
 
 ### Trans4PASS models SPin -> SPan:
 from Stanford2D3D_pinhole to Stanford2D3D_panoramic
@@ -209,10 +209,10 @@ python tools/eval_s2d3d.py --config-file configs/stanford2d3d/trans4pass_plus_ti
 
 | **Network**     | **SPin** |   **SPan** | Download |
 | :-------------- | :-------: | :---------: | :-------------: |
-| Trans4PASS (T)  |   49.05 | 46.08 | [model](https://drive.google.com/drive/folders/1lfes7iqV1Vm_snScBohuKOYvgpeBpq4F?usp=sharing) |
-| Trans4PASS (S)  |   50.20 | 48.34 | [model](https://drive.google.com/drive/folders/1ONymWDP7-zC3yt5wG7xoRkhDp1Bt0opW?usp=sharing) |
-| Trans4PASS+ (T) |   48.99 | 46.75 | [model](https://drive.google.com/drive/folders/1Ru_V_02btr79eM3dwvaBHECECncuGuMM?usp=sharing) |
-| Trans4PASS+ (S) |   53.46 | 50.35 | [model](https://drive.google.com/drive/folders/1vuEQ2vQp3D9n7XvA9k8HeRGN5UFqtMJp?usp=sharing) |
+| Trans4PASS (T)  |   49.05 | 46.08 | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/stanford2d3d/trans4pass_tiny_1080x1080) |
+| Trans4PASS (S)  |   50.20 | 48.34 | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/stanford2d3d/trans4pass_small_1080x1080) |
+| Trans4PASS+ (T) |   48.99 | 46.75 | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/stanford2d3d/trans4pass_plus_tiny_1080x1080) |
+| Trans4PASS+ (S) |   53.46 | 50.35 | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/stanford2d3d/trans4pass_plus_small_1080x1080) |
 
 
 ### Trans4PASS models on SPan:
@@ -226,9 +226,9 @@ python tools/eval_s2d3d.py --config-file configs/stanford2d3d_pan/trans4pass_plu
 
 | **Network**     | **Fold** |   **SPan** | Download |
 | :-------------- | :-------: | :---------: | :-------------: |
-| Trans4PASS+ (S) |   1 | 54.05 | [model](https://drive.google.com/drive/folders/14YXmPBXc8m-XR7W_LyKwiDotrjyjSKfH?usp=sharing) |
-| Trans4PASS+ (S) |   2 | 47.70 | [model](https://drive.google.com/drive/folders/14YXmPBXc8m-XR7W_LyKwiDotrjyjSKfH?usp=sharing) |
-| Trans4PASS+ (S) |   3 | 60.25 | [model](https://drive.google.com/drive/folders/14YXmPBXc8m-XR7W_LyKwiDotrjyjSKfH?usp=sharing) |
+| Trans4PASS+ (S) |   1 | 54.05 | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/stanford2d3d_pan/trans4pass_plus_small_1080x1080) |
+| Trans4PASS+ (S) |   2 | 47.70 | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/stanford2d3d_pan/trans4pass_plus_small_1080x1080) |
+| Trans4PASS+ (S) |   3 | 60.25 | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/stanford2d3d_pan/trans4pass_plus_small_1080x1080) |
 | Trans4PASS+ (S) | avg | 54.00 |  |
 
 *Note: for the Trans4PASS versions (not Trans4PASS+), please modify the respective DMLP version, check [here](https://github.com/jamycheung/Trans4PASS/blob/main/segmentron/models/trans4pass.py#L5-L8).*
@@ -242,10 +242,10 @@ python tools/eval_sp.py --config-file configs/synpass/trans4pass_plus_tiny_512x5
 
 | **Network**   | **Cloudy** | **Foggy**  | **Rainy**  | **Sunny**  |  **Day**   | **Night**  | **ALL (val)** | **ALL (test)** | Download |
 | :------------------ | :--------: | :--------: | :--------: | :--------: | :--------: | :--------: | :-----------: | :------------: | :-----: |
-| Trans4PASS (T)   |   46.90   |   41.97   |   41.61   |   45.52   |   44.48   |   34.73   |    43.68     |     38.53     | [model](https://drive.google.com/drive/folders/1Xwn1d0VA3legdq_eANA2QrNFk8fmoD5n?usp=sharing) |
-| Trans4PASS (S)  |   46.74   |   43.49   |   43.39   |   45.94   |   45.52   |   37.03   |    44.80     |     38.57     | [model](https://drive.google.com/drive/folders/14qm6uWAgQrxI-doIoVgfV7is1pS03iZE?usp=sharing) |
-| Trans4PASS+ (T)  |   48.33   |   43.41   |   43.11   |   46.99   |   46.52   |   35.27   |    45.21     |     38.85     | [model](https://drive.google.com/drive/folders/1C6b056J1yUH4srmQ1LlulDUZIdYpb237?usp=sharing) |
-| Trans4PASS+ (S) | 48.87 | 44.80 | 45.24 | 47.62 | 47.17 | 37.96 |  46.47   |   39.16   | [model](https://drive.google.com/drive/folders/1rrqa4nBmgGT0vO3b5duLYNKESX2JbhvT?usp=sharing) |
+| Trans4PASS (T)   |   46.90   |   41.97   |   41.61   |   45.52   |   44.48   |   34.73   |    43.68     |     38.53     | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/synpass/trans4pass_tiny_512x512) |
+| Trans4PASS (S)  |   46.74   |   43.49   |   43.39   |   45.94   |   45.52   |   37.03   |    44.80     |     38.57     | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/synpass/trans4pass_small_512x512) |
+| Trans4PASS+ (T)  |   48.33   |   43.41   |   43.11   |   46.99   |   46.52   |   35.27   |    45.21     |     38.85     | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/synpass/trans4pass_plus_tiny_512x512) |
+| Trans4PASS+ (S) | 48.87 | 44.80 | 45.24 | 47.62 | 47.17 | 37.96 |  46.47   |   39.16   | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/synpass/trans4pass_plus_small_512x512) |
 
 
 ### Trans4PASS models Pin2Pan vs. Syn2Real settings:
@@ -264,25 +264,25 @@ python tools/eval_s2d3d8.py --config-file configs/stanford2d3d8/trans4pass_plus_
 
 | (1) ***Outdoor Pin2Pan*:**  | **CS13**  | **DP13**     | **mIoU Gaps** | **model** |
 | :------------------------ | :-------- | :----------- | :------------ | ------------- |
-| Trans4PASS (Tiny)         | 71.63    | 49.21 | -22.42       | [model](https://drive.google.com/drive/folders/1LhJmprHcTn8zsNMTlscQj9Gx3pT7l7TM?usp=sharing) |
-| Trans4PASS (Small)        | 75.21    | 50.96 | -24.25       | [model](https://drive.google.com/drive/folders/1X3tcC9JnqcyKX3Zz0q7sGCZ5rd8Xenm6?usp=sharing) |
-| Trans4PASS+ (Tiny)        | 72.92    | 49.16 | -23.76       | [model](https://drive.google.com/drive/folders/1DxkTkz7b5gWhbj_J7ljEWgTQTSUEObgO?usp=sharing) |
-| Trans4PASS+ (Small)       | 74.52    | 51.40 | -23.12       | [model](https://drive.google.com/drive/folders/1pVSraZXub9RnQjM-vDMK_nnQtKpQ3_xT?usp=sharing) |
+| Trans4PASS (Tiny)         | 71.63    | 49.21 | -22.42       | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/cityscapes13/trans4pass_tiny_512x512) |
+| Trans4PASS (Small)        | 75.21    | 50.96 | -24.25       | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/cityscapes13/trans4pass_small_512x512) |
+| Trans4PASS+ (Tiny)        | 72.92    | 49.16 | -23.76       | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/cityscapes13/trans4pass_plus_tiny_512x512) |
+| Trans4PASS+ (Small)       | 74.52    | 51.40 | -23.12       | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/cityscapes13/trans4pass_plus_small_512x512) |
 | (2) ***Outdoor Syn2Real*:** | **SP13**  | **DP13**     | **mIoU Gaps** |  |
-| Trans4PASS (Tiny)         | 61.08    | 39.68 | -21.40       | [model](https://drive.google.com/drive/folders/1pVSraZXub9RnQjM-vDMK_nnQtKpQ3_xT?usp=sharing) |
-| Trans4PASS (Small)        | 62.76    | 43.18 | -19.58       | [model](https://drive.google.com/drive/folders/1ASqH2MmjdzN2I-gVE5ihmFQ7eXj5iSQj?usp=sharing) |
-| Trans4PASS+ (Tiny)        | 60.37    | 39.62 | -20.75       | [model](https://drive.google.com/drive/folders/1y5JTty7PpGVCuuADOM8z4gvENWcB02Kr?usp=sharing) |
-| Trans4PASS+ (Small)       | 61.59    | 43.17 | -18.42       | [model](https://drive.google.com/drive/folders/1u1gieYZ6N-mxXR3TiIjyVjY9aY1oY2Qo?usp=sharing) |
+| Trans4PASS (Tiny)         | 61.08    | 39.68 | -21.40       | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/synpass13/trans4pass_tiny_512x512) |
+| Trans4PASS (Small)        | 62.76    | 43.18 | -19.58       | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/synpass13/trans4pass_small_512x512) |
+| Trans4PASS+ (Tiny)        | 60.37    | 39.62 | -20.75       | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/synpass13/trans4pass_plus_tiny_512x512) |
+| Trans4PASS+ (Small)       | 61.59    | 43.17 | -18.42       | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/synpass13/trans4pass_plus_small_512x512) |
 | (3) ***Indoor Pin2Pan*:**   | **SPin8** | **SPan8**    | **mIoU Gaps** |  |
-| Trans4PASS (Tiny)         | 64.25    | 58.93 | -5.32        | [model](https://drive.google.com/drive/folders/1SQHy2cjcFagt4Fe1PGKV41EZ4YVzkY0O?usp=sharing) |
-| Trans4PASS (Small)        | 66.51    | 62.39 | -4.12        | [model](https://drive.google.com/drive/folders/174IvfmClJUE-idmrzyy8NlApxTOZHHOo?usp=sharing) |
-| Trans4PASS+ (Tiny)        | 65.09    | 59.55 | -5.54        | [model](https://drive.google.com/drive/folders/1Nikm73tGyIyvrzyB4bcI2WWe1bYO6Q8-?usp=sharing) |
-| Trans4PASS+ (Small)       | 65.29    | 63.08 | -2.21        | [model](https://drive.google.com/drive/folders/1PxKuHgYY3m-lQ0lkkAFSzHcvjwB6H8z7?usp=sharing) |
+| Trans4PASS (Tiny)         | 64.25    | 58.93 | -5.32        | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/stanford2d3d8/trans4pass_tiny_1080x1080) |
+| Trans4PASS (Small)        | 66.51    | 62.39 | -4.12        | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/stanford2d3d8/trans4pass_small_1080x1080) |
+| Trans4PASS+ (Tiny)        | 65.09    | 59.55 | -5.54        | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/stanford2d3d8/trans4pass_plus_tiny_1080x1080) |
+| Trans4PASS+ (Small)       | 65.29    | 63.08 | -2.21        | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/stanford2d3d8/trans4pass_plus_small_1080x1080) |
 | (4) ***Indoor Syn2Real*:**  | **S3D8**  | **SPan8**    | **mIoU Gaps** |  |
-| Trans4PASS (Tiny)         | 76.84    | 48.63 | -28.21       | [model](https://drive.google.com/drive/folders/12mNdqVZ8I92O4rrlpqAntyIqIpBZ3IaP?usp=sharing) |
-| Trans4PASS (Small)        | 77.29    | 51.70 | -25.59       | [model](https://drive.google.com/drive/folders/1vwSA_Q308WIc-u-eHtt-YFmZzrM-nN7Z?usp=sharing) |
-| Trans4PASS+ (Tiny)        | 76.91    | 50.60 | -26.31       | [model](https://drive.google.com/drive/folders/1_PGhg0PYRxjXiQ82APSzCjkRRZPay-PE?usp=sharing) |
-| Trans4PASS+ (Small)       | 76.88    | 51.93 | -24.95       | [model](https://drive.google.com/drive/folders/1Z7wuGjmQVAbZKP5UEtPmIlN3OeMuiTls?usp=sharing) |
+| Trans4PASS (Tiny)         | 76.84    | 48.63 | -28.21       | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/structured3d8/trans4pass_tiny_512x512) |
+| Trans4PASS (Small)        | 77.29    | 51.70 | -25.59       | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/structured3d8/trans4pass_small_512x512) |
+| Trans4PASS+ (Tiny)        | 76.91    | 50.60 | -26.31       | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/structured3d8/trans4pass_plus_tiny_512x512) |
+| Trans4PASS+ (Small)       | 76.88    | 51.93 | -24.95       | [model](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/workdirs/structured3d8/trans4pass_plus_small_512x512) |
 
 
 
@@ -315,7 +315,7 @@ python train_mpa_out_p2p.py
 
 
 ### Test
-Download the models from [GoogleDrive](https://drive.google.com/drive/folders/1snUdrg_Y9whnCQi9QNFLI6hRoYhGm3Qv?usp=sharing) and save in `adaptations/snapshots` folder as:
+Download the models from [Hugging Face](https://huggingface.co/InSAI-Lab/Trans4PASS/tree/main/adaptations/snapshots) and save in `adaptations/snapshots` folder as:
 
 ```
 adaptations/snapshots/
